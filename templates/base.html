@@ -1,0 +1,63 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> ML Based Smart ChatBot | Sem II - Mini Project</title>
+    </head>
+    <body>
+    <header class="chatbot-header">
+        <label class="container-label">
+            ML Based Smart ChatBot
+        </label>
+        <label class="guidance-section">
+            - Guide: Dr.Mamata Kalas.
+        </label>
+    </header>
+    <div class="container">
+        <div class="descriptive-container">
+            <ul>
+                <li>Hello Ranajit,</li><br/>
+                <li>I’m machine learning based Smart ChatBot — your virtual assistant.</li><br/>
+                <li>I can help answer many of your questions and even complete certain actions for you.</li><br/>
+                <li>I’m constantly being updated, so stay tuned for more.</li><br/>
+                <li>To get started, click on chat icon and type a few keywords.</li>
+            </ul>
+        </div>
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img class="chatbox_admin_icon" src="{{ url_for('static', filename='images/chatbot-admin.png') }}" alt="Chatbot adam icon">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Chat support</h4>
+                        <p class="chatbox__description--header"> Hi. I am ML based smart chatbot. How can I help you?</p>
+                    </div>
+                    <div class="chatbox_close">
+                        <img class="chatbox_close_icon" src="{{ url_for('static', filename='images/close.png') }}" alt="Chatbot close icon">
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+    </body>
+    </html>
